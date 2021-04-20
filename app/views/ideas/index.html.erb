@@ -1,0 +1,14 @@
+<h1>All Ideas</h1>
+
+<ul>
+<% @ideas.each do |idea|%>
+<li>
+<div>
+<%= link_to idea.title, idea_path(idea) %>
+</div>
+<small>published <%= time_ago_in_words(idea.created_at)%> ago</small>
+
+</li>
+<% end %>
+
+</ul>

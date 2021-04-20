@@ -1,0 +1,23 @@
+<h1>Edit Idea Form</h1>
+
+
+<%= form_with(model: @idea, local: true) do |form| %>
+    <% if @idea.errors.present? %>
+    <p>
+    <%= @idea.errors.full_messages.join(",") %>
+    </p>
+    <% end %>
+<div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+</div>
+
+<div>
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+</div
+<div> 
+<%= form.submit @submit_text  %> 
+</div>
+
+ <% end %>
